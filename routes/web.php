@@ -19,14 +19,12 @@ Route::get('/posts/create', 'PostController@create')->name('post.create');
 
 Route::post('/posts', 'PostController@store')->name('post.store');
 Route::get('/posts/{post}', 'PostController@show')->name('post.show');
+Route::get('/posts/{post}/edit', 'PostController@edit')->name('post.edit');
+Route::patch('/posts/{post}', 'PostController@update')->name('post.update');
 
 Route::get('/', 'MainController@index')->name('main.index');
 
 
-Route::get('/panel', 'PostController@showPanel')->name('panel.index');
 Route::get('/about', 'AboutController@index')->name('about.index');
 Route::get('/contacts', 'ContactController@index')->name('contact.index');
 
-Route::get('/savepost', 'PostController@createPost');
-Route::get('/updatepost', 'PostController@updatePost');
-Route::get('/deletepost', 'PostController@deletePost');

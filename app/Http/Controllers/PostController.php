@@ -26,9 +26,9 @@ class PostController extends Controller
     public function store()
     {
         $post = \request()->validate([
-            'title'=>'string',
-            'post_content'=>'string',
-            'image'=>'string'
+            'title' => 'string',
+            'post_content' => 'string',
+            'image' => 'string'
         ]);
         $post['title'] = ucfirst($post['title']);
         $post['post_content'] = ucfirst($post['post_content']);
@@ -41,32 +41,22 @@ class PostController extends Controller
     {
         return (view('post.show', compact('post')));
     }
-//    public function createPost(Request $request): string
-//    {
-//       $post = new Post();
-//       $post->title = $request->input('title');
-//       $post->post_content = $request->input('post_content');
-//       //dd($post);
-//       $post->save();
-//        return 'post save ok';
-//    }
-    public function updatePost(Request $request): string
+
+    public function edit(Post $post)
     {
-        $post = Post::find($request->input('id'));
-        $post->title = $request->input('title');
-        $post->post_content = $request->input('post_content');
-        $post->save();
-        return 'post update ok';
+        return view('post.edit', compact('post'));
     }
 
-    public function deletePost(Request $request): string
+    public function update(Post $post)
     {
-        $post = Post::find($request->input('id'));
-        if ($post) {
-            $post->delete();
-            return 'Post deleted successfully';
-        } else {
-            return 'Post not found';
-        }
+        $new_post = \request()->validate([
+            'title' => 'string',
+            'post_content' => 'string',
+            'image' => 'string'
+        ]);
+        $post->update($new_post);
+        return redirect()->route('post.show', $post->id);
     }
+
+
 }

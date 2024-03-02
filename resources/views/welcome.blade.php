@@ -32,9 +32,6 @@
                             <a class="nav-link active" aria-current="page" href="{{ route('post.index') }}">Posts</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="{{ route('panel.index') }}">Control Panel of posts</a>
-                        </li>
-                        <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="{{ route('contact.index') }}">Contacts</a>
                         </li>
 

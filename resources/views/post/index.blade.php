@@ -1,19 +1,26 @@
 @extends('welcome')
 @section('content')
-    <h3>Our posts</h3>
-@foreach($posts as $post)
-<div class="card mt-2">
-   <div class="card-header">
-       <h3><a href="{{ route('post.show', $post->id) }}">{{ $post->id }}. {{ $post->title }}</a></h3>
-   </div>
-    <div class="card-body">
-        <span>{{ $post->post_content }} - </span>
+
+    <div class="d-flex justify-content-between">
+        <h3 class="display-3">Our posts</h3>
+        <div><a href="{{ route('post.create') }}" class="btn btn-info">Add new post</a></div>
     </div>
-    <div class="card-footer">
-        <span>{{ $post->likes }}</span>
-    </div>
-</div>
 
 
-@endforeach
+    <div class="row justify-content-center">
+        @foreach($posts as $post)
+            <div class="card m-2 col-11 col-md-5 p-0">
+                <div class="card-header text-center">
+                    <h3><a href="{{ route('post.show', $post->id) }}">{{ $post->id }}. {{ $post->title }}</a></h3>
+                </div>
+                <div class="card-body">
+                    <span>{{ $post->post_content }} - </span>
+                </div>
+                <div class="card-footer">
+                    <span>{{ $post->likes }}</span>
+                    <span>{{ $post->image }}</span>
+                </div>
+            </div>
+        @endforeach
+    </div>
 @endsection
