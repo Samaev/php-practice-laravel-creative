@@ -20,10 +20,38 @@
 <body>
 <div class="container">
     <a href="{{ route('main.index') }}"><h1>LARAVEL CREATIVE</h1></a>
-    <div><a href="{{ route('about.index') }}">About</a></div>
-    <div><a href="{{ route('post.index') }}">Posts</a></div>
-    <div><a href="{{ route('panel.index') }}">Control Panel of posts</a></div>
-    <div><a href="{{ route('contact.index') }}">Contacts</a></div>
+    <div class="row">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="{{ route('about.index') }}">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="{{ route('post.index') }}">Posts</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="{{ route('panel.index') }}">Control Panel of posts</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="{{ route('contact.index') }}">Contacts</a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+{{--        <nav class="nav">--}}
+{{--            <ul>--}}
+{{--                <li><a href="{{ route('about.index') }}">About</a></li>--}}
+{{--                <li><a href="{{ route('post.index') }}">Posts</a></li>--}}
+{{--                <li><a href="{{ route('panel.index') }}">Control Panel of posts</a></li>--}}
+{{--                <li><a href="{{ route('contact.index') }}">Contacts</a></li>--}}
+{{--            </ul>--}}
+{{--        </nav>--}}
+    </div>
     <div>
         @yield('content')
     </div>
