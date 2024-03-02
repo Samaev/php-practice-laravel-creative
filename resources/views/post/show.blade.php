@@ -9,7 +9,12 @@
     </div>
     <div class="card-footer d-flex justify-content-around">
         <a class="btn btn-outline-secondary" href="{{ route('post.edit', $post->id) }}">Edit</a>
-        <a class="btn btn-danger" href="{{ route('post.update', $post) }}">Delete</a>
+        <form action="{{ route('post.delete', $post->id) }}" method="post">
+            @csrf
+            @method('delete')
+            <button type="submit" class="btn btn-danger" href="">Delete</button>
+        </form>
+
     </div>
 </div>
     <a href="{{ route('post.index') }}" class="btn btn-outline-info mt-3">Back</a>

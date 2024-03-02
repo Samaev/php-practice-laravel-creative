@@ -8,10 +8,10 @@
 
 
     <div class="row justify-content-center">
-        @foreach($posts as $post)
+        @foreach($posts as $key=>$post)
             <div class="card m-2 col-11 col-md-5 p-0">
                 <div class="card-header text-center">
-                    <h3><a href="{{ route('post.show', $post->id) }}">{{ $post->id }}. {{ $post->title }}</a></h3>
+                    <h3><a href="{{ route('post.show', $post->id) }}">{{ ++$key }}. {{ $post->title }}</a></h3>
                 </div>
                 <div class="card-body">
                     <span>{{ $post->post_content }} - </span>

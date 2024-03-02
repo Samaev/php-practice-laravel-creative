@@ -11,10 +11,7 @@ class PostController extends Controller
     public static function index()
     {
         $posts = Post::all();
-        foreach ($posts as $post) {
-            $post->title = ucfirst($post->title);
-            $post->post_content = ucfirst($post->post_content);
-        }
+
         return view('post.index', compact('posts'));
     }
 
@@ -56,6 +53,13 @@ class PostController extends Controller
         ]);
         $post->update($new_post);
         return redirect()->route('post.show', $post->id);
+    }
+
+    public function destroy(Post $post)
+    {
+        $post->delete();
+
+        return redirect()->route('post.index');
     }
 
 
