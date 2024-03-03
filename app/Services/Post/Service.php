@@ -15,7 +15,7 @@ class Service
         unset($data['tags']);
         $post = Post::create($data);
 
-        $post->tags()->atach($tags);
+        $post->tags()->attach($tags);
     }
 
     public function update($post, $data)
