@@ -24,5 +24,8 @@
                 </div>
             </div>
         @endforeach
+        <div class="mt-3 text-center">
+            {{ $posts->links() }}
+        </div>
     </div>
 @endsection
