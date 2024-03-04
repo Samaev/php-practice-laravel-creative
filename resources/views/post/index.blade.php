@@ -25,7 +25,7 @@
             </div>
         @endforeach
         <div class="mt-3 text-center">
-            {{ $posts->links() }}
+            {{ $posts->withQueryString()->links() }}
         </div>
     </div>
 @endsection
