@@ -16,7 +16,7 @@ class AdminPanelMiddleware
      */
     public function handle(Request $request, Closure $next)
     {
-        auth()->user();
+        dd(auth());
         return $next($request);
     }
 }
