@@ -1,11 +1,14 @@
 @extends('welcome')
 @section('content')
 <div class="card">
-    <div class="card-header">
-        {{ $post->title }}
+    <div class="card-header text-center text-capitalize">
+        <h1 class="text-capitalize">{{  $post->title }}</h1>
     </div>
     <div class="card-body">
         {{ $post->post_content }}
+        <div class="text-center rounded-1">
+            <img style="height: 200px;width: auto" src="{{ $post->image }}" alt="">
+        </div>
     </div>
     <div class="card-footer d-flex justify-content-around">
         <a class="btn btn-outline-secondary" href="{{ route('post.edit', $post->id) }}">Edit</a>

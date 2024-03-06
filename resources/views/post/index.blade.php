@@ -13,14 +13,16 @@
                 <div class="card-header text-center">
                     <h3 class="card-title"><a href="{{ route('post.show', $post->id) }}">{{ $post->title }}</a></h3>
                 </div>
-                <div class="card-body">
-                    <span>{{ $post->post_content }} - </span>
+                <div class="card-body d-flex">
+                    <div class="d-flex justify-content-center align-items-center me-2">
+                        <img class="rounded-2" style="height: 100px;width: auto" src="{{ $post->image }}" alt="">
+                    </div>
+                    <div class="d-flex justify-content-center align-items-center">{{ $post->post_content }}</div>
                 </div>
                 <div class="card-footer">
                     <button type="button" class="btn btn-primary">
                         Likes: <span class="badge bg-danger">{{ $post->likes }}</span>
                     </button>
-                    <span>{{ $post->image }}</span>
                 </div>
             </div>
         @endforeach

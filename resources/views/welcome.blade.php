@@ -32,22 +32,14 @@
                             <a class="nav-link active" aria-current="page" href="{{ route('post.index') }}">Posts</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="{{ route('contact.index') }}">Contacts</a>
+                            <a class="nav-link active" aria-current="page"
+                               href="{{ route('contact.index') }}">Contacts</a>
                         </li>
 
                     </ul>
                 </div>
             </div>
         </nav>
-
-{{--        <nav class="nav">--}}
-{{--            <ul>--}}
-{{--                <li><a href="{{ route('about.index') }}">About</a></li>--}}
-{{--                <li><a href="{{ route('post.index') }}">Posts</a></li>--}}
-{{--                <li><a href="{{ route('panel.index') }}">Control Panel of posts</a></li>--}}
-{{--                <li><a href="{{ route('contact.index') }}">Contacts</a></li>--}}
-{{--            </ul>--}}
-{{--        </nav>--}}
     </div>
     <div>
         @yield('content')

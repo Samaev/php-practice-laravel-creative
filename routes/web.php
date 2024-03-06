@@ -31,3 +31,7 @@ Route::get('/', 'MainController@index')->name('main.index');
 Route::get('/about', 'AboutController@index')->name('about.index');
 Route::get('/contacts', 'ContactController@index')->name('contact.index');
 
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
