@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ShipmentController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,6 +17,8 @@ use Illuminate\Support\Facades\Route;
 Route::group(['namespace' => 'Post'], function () {
     Route::get('/posts', 'IndexController')->name('post.index');
     Route::get('/posts/create', 'CreateController')->name('post.create');
+    Route::post('/create-shipment', [ShipmentController::class, 'createShipmentAndRetrieveTrackingNumber'])->name('create.shipment');
+
 
     Route::post('/posts', 'StoreController')->name('post.store');
     Route::get('/posts/{post}', 'ShowController')->name('post.show');
@@ -29,6 +32,7 @@ Route::get('/', 'MainController@index')->name('main.index');
 
 
 Route::get('/about', 'AboutController@index')->name('about.index');
+Route::get('/shipments', 'ShipViewController@index')->name('shipment.index');
 Route::get('/contacts', 'ContactController@index')->name('contact.index');
 
 

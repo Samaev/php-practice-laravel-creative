@@ -1,5 +1,7 @@
 @extends('welcome')
 @section('content')
-    <h1>About page</h1>
-
+    <div class="container">
+        <h1>About page</h1>
+        <a href="/shipments">Shipments</a>
+    </div>
 @endsection
