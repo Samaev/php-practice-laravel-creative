@@ -5,7 +5,7 @@
            <h1>Select item in a menu above please</h1>
         </div>
         <div>
-            This new feature on a master
+            This is demo version
         </div>
         <div>
             This new feature on a master
