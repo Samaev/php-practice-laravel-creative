@@ -5,7 +5,10 @@
            <h1>Select item in a menu above please</h1>
         </div>
         <div>
-            This is demo branch
+            This new feature on a master
+        </div>
+        <div>
+            This new feature on a master
         </div>
     </div>
 @endsection
