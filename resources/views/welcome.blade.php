@@ -7,6 +7,7 @@
         <div>
             This new feature on a master
         </div>
+        <p>Continue work on master</p>
     </div>
 @endsection
 
