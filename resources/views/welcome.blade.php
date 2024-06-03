@@ -8,6 +8,8 @@
             This new feature on a master
         </div>
         <p>Continue work on master</p>
+        <p>Continue work on master1</p>
+        <p>Continue work on master2</p>
     </div>
 @endsection
 
